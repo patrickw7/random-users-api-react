@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { Switch, Route } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { Switch, Route } from 'react-router-dom';
 
-import User from "../User";
-import UserDetails from "../UserDetails";
+import User from '../User';
+import UserDetails from '../UserDetails';
 
 const UserList = () => {
   const [user, setUser] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const [hasError, setError] = useState(false);
-  const [ready, setReady] = useState(false);
+  const [dataReady, setDataReady] = useState(false);
 
-  const amountOfUsers = "?results=10";
-  const API_URL = "https://randomuser.me/api/";
+  const amountOfUsers = '?results=10';
+  const API_URL = 'https://randomuser.me/api/';
 
-  const getData = () => {
+  const getUsersData = () => {
     axios(`${API_URL}${amountOfUsers}`)
       .then((response) => {
         setUser(response.data.results);
@@ -28,9 +28,9 @@ const UserList = () => {
   };
 
   useEffect(() => {
-    getData();
+    getUsersData();
     let lazyDataLoading = setTimeout(() => {
-      setReady(true);
+      setDataReady(true);
     }, 5000);
 
     return () => {
@@ -42,7 +42,7 @@ const UserList = () => {
       {isLoading && <p>Loading please be patient...</p>}
       {hasError && <p>An error has occurred</p>}
       <Switch>
-        <Route exact path="/users">
+        <Route exact path='/users'>
           {!isLoading &&
             user.map((user) => {
               return (
@@ -54,13 +54,13 @@ const UserList = () => {
                     email={user.email}
                     registrationDate={user.registered.date}
                     id={user.login.uuid}
-                    ready={ready}
+                    dataReady={dataReady}
                   />
                 </div>
               );
             })}
         </Route>
-        <Route exact path={`/:userID`}>
+        <Route exact path={'/:userID'}>
           <UserDetails user={user} />
         </Route>
       </Switch>

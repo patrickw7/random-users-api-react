@@ -1,44 +1,43 @@
 .userDetailsContainer {
-    width: 80%;
-    height: 80%;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  .cardBack {
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-  
-    .cardBack {
-      display: flex;
-     width: 35rem;
-     height: 20rem;
-     border-radius: 5px;
-    
-     color: #2C3E50;
-     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  
-     span {
-       font-weight: bold;
-       margin: 10px 0;
-     }
-  
-     p {
-       margin: 10px 0;
-     }
-  
-     .cardBack__information {
-  width: 60%;
+    width: 38rem;
+    height: 22rem;
+    border-radius: 5px;
+
+    color: #2c3e50;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    span {
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    .cardBack__information {
+      width: 70%;
+      height: 100%;
+      padding-top: 20px;
+    }
+  }
+
+  h2 {
+    color: #37474f;
+    margin-bottom: 20px;
+  }
+}
+
+.leaflet-container {
   height: 100%;
-  padding-top: 20px;
-     }
-    }
-  
-    h2 {
-      color: #37474F;
-      margin-bottom: 20px;
-      
-    }
-  }
-  
-  .leaflet-container {
-    height: 100%;
-    width: 100%
-  }
+  width: 75%;
+}

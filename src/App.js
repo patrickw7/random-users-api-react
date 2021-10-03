@@ -1,24 +1,24 @@
-import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import './App.css';
-import UserList from "./components/UserList";
-import Home from "./components/Home";
-import Navbar from "./components/Navbar/Navbar";
+import UserList from './components/UserList';
+import Home from './components/Home';
+import Navbar from './components/Navbar/Navbar';
 
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar />
+        <Navbar/>
         <Route exact path="/">
-          <Home />
+          <Home/>
         </Route>
-        <UserList />
+        <UserList/>
       </Router>
     </div>
   );
-}
+};
 
 export default App;

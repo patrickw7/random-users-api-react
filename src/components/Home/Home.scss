@@ -1,11 +1,13 @@
+@use '../../styles/main.scss' as *;
+
 .homePage {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f6f7f9;
+  background-color: $mainBackground;
 
   h1 {
-    color: #37474f;
+    color: $fontColor;
     margin-top: 20px;
   }
 

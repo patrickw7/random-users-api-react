@@ -1,3 +1,5 @@
+@use '../../styles/main.scss' as *;
+
 .userDetailsContainer {
   width: 80%;
   height: 80%;
@@ -12,8 +14,8 @@
     height: 22rem;
     border-radius: 5px;
 
-    color: #2c3e50;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    color: $fontColor;
+    box-shadow: $boxShadow;
 
     span {
       font-weight: bold;
@@ -27,12 +29,13 @@
     .cardBack__information {
       width: 70%;
       height: 100%;
+      background-color: $cardBackground;
       padding-top: 20px;
     }
   }
 
   h2 {
-    color: #37474f;
+    color: $fontColor;
     margin-bottom: 20px;
   }
 }

@@ -1,0 +1,46 @@
+@use '../../styles/main.scss' as *;
+
+.userDetailsContainer {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  .cardBack {
+    display: flex;
+    width: 38rem;
+    height: 22rem;
+    border-radius: 5px;
+
+    color: $fontColor;
+    box-shadow: $boxShadow;
+
+    span {
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    .cardBack__information {
+      width: 70%;
+      height: 100%;
+      background-color: $cardBackground;
+      padding-top: 20px;
+    }
+  }
+
+  h2 {
+    color: $fontColor;
+    margin-bottom: 20px;
+  }
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 75%;
+}

@@ -1,0 +1,17 @@
+@use '../../styles/main.scss' as *;
+
+.homePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $mainBackground;
+
+  h1 {
+    color: $fontColor;
+    margin-top: 20px;
+  }
+
+  .homeLogo {
+    width: 50%;
+  }
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { useParams, Link } from 'react-router-dom';
 
@@ -59,6 +60,10 @@ const UserDetails = ({ user }) => {
         })}
     </div>
   );
+};
+
+UserDetails.propTypes = {
+  user: PropTypes.array
 };
 
 export default UserDetails;

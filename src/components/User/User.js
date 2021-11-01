@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactPlaceholder from 'react-placeholder';
 import 'react-placeholder/lib/reactPlaceholder.css';
 import { Link } from 'react-router-dom';
@@ -28,6 +29,15 @@ const User = ({ photo, name, surname, email, dataReady, id }) => {
       </div>
     </ReactPlaceholder>
   );
+};
+
+User.propTypes = {
+  photo: PropTypes.string,
+  name: PropTypes.string,
+  surname: PropTypes.string,
+  email: PropTypes.string,
+  dataReady: PropTypes.bool,
+  id: PropTypes.string
 };
 
 export default User;

@@ -1,11 +1,11 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
-import './Navbar.scss';
+import "./Navbar.scss";
 
 const Navbar = () => {
   const style = {
-    color: '#f9ca24'
+    color: "#f9ca24"
   };
   return (
     <nav>

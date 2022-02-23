@@ -1,0 +1,24 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "node": true,
+    "commonjs": true,
+    "browser": true,
+    "es6": true
+  },
+  "plugins": ["react", "prettier"],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
+  "rules": {
+    "prettier/prettier": "off",
+    "no-unused-vars": "warn",
+    "react/display-name": "off",
+    "no-debugger": "warn",
+    "no-undef": "off"
+  }
+}

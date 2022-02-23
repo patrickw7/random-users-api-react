@@ -1,48 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Switch, Route } from 'react-router-dom';
+import React from "react";
+import { Switch, Route } from "react-router-dom";
 
-import User from '../User';
-import UserDetails from '../UserDetails';
+import useAxios from "../../utils/hooks/useAxios";
+import User from "../User";
+import UserDetails from "../UserDetails";
 
 const UserList = () => {
-  const [user, setUser] = useState([]);
-  const [isLoading, setLoading] = useState(true);
-  const [hasError, setError] = useState(false);
-  const [dataReady, setDataReady] = useState(false);
+  const { user, isLoading, hasError, dataReady } = useAxios(process.env.REACT_APP_API_ENDPOINT);
 
-  const amountOfUsers = '?results=10';
-  const API_URL = 'https://randomuser.me/api/';
-
-  const getUsersData = () => {
-    axios(`${API_URL}${amountOfUsers}`)
-      .then((response) => {
-        setUser(response.data.results);
-        setLoading(false);
-      })
-      .catch((error) => {
-        setError(true);
-        setLoading(false);
-        console.error(error);
-      });
-  };
-
-  useEffect(() => {
-    getUsersData();
-    let lazyDataLoading = setTimeout(() => {
-      setDataReady(true);
-    }, 5000);
-
-    return () => {
-      clearTimeout(lazyDataLoading);
-    };
-  }, []);
   return (
     <React.Fragment>
       {isLoading && <p>Loading please be patient...</p>}
       {hasError && <p>An error has occurred</p>}
       <Switch>
-        <Route exact path='/users'>
+        <Route exact path="/users">
           {!isLoading &&
             user.map((user) => {
               return (
@@ -60,7 +31,7 @@ const UserList = () => {
               );
             })}
         </Route>
-        <Route exact path={'/:userID'}>
+        <Route exact path={"/:userID"}>
           <UserDetails user={user} />
         </Route>
       </Switch>

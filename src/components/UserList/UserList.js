@@ -11,7 +11,7 @@ const UserList = () => {
   return (
     <React.Fragment>
       {isLoading && <p>Loading please be patient...</p>}
-      {hasError && <p>An error has occurred</p>}
+      {hasError && <p>An error has occurred, Try again later!</p>}
       <Switch>
         <Route exact path="/users">
           {!isLoading &&

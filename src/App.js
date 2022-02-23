@@ -14,7 +14,9 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <UserList />
+        <Route exact path="/users">
+          <UserList />
+        </Route>
       </Router>
     </div>
   );

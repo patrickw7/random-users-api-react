@@ -8,9 +8,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "0.21.4",
-    "eslint-plugin-prettier": "^4.0.0",
     "leaflet": "1.7.1",
-    "prettier": "^2.5.1",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -36,6 +34,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "eslint-config-prettier": "^8.4.0"
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1"
   }
 }
